@@ -351,4 +351,32 @@ public class LinkedList
         return list2;
     }
 
+    /**
+     * @param a
+     * @param b
+     * @return true if linkedlist b is a subset of the linkedlist a
+     */
+    public static boolean isSubset(LinkedList a, LinkedList b)
+    {
+        Node curr = a.head;
+        int counter = 0;
+
+        while(curr != null)
+        {
+            Node curr2 = b.head;//curr 2 is initialized inside the outer loop so it resets with each eteration of the inner loop
+            while(curr2 != null)
+            {
+               if(curr.data == curr2.data)
+               counter++; //the counter will be incremented if the element from list b is found in list a
+               break;
+            }
+
+            curr = curr.next;
+        }
+        if(counter == b.countNodes())
+            return true;
+        return false;
+
+    }
+
 } // end LinkedList
