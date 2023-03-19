@@ -302,5 +302,38 @@ public class LinkedList
         return mergedList;
     } // end mergeSorted
     
+    /**
+     * @param list1
+     * @param list2
+     * @return
+     * mergeUnsortedLists takes two unsorted linked lists and returns a sorted linked list
+     */
+    public static LinkedList mergeUnsortedLists(LinkedList list1, LinkedList list2)
+    {
+        LinkedList mergedList = new LinkedList();
+        Node curr1 = list1.head;
+        Node curr2 = list2.head;
+
+        while(curr1 != null && curr2 != null) //loop to go through both lists
+        {
+            mergedList.addInPlace(curr1.data);//using addInPlace method we add each node in its place in the new list
+            curr1 = curr1.next;
+            mergedList.addInPlace(curr2.data);
+            curr2 = curr2.next;
+        }
+        while(curr1 != null) //in case list 1 is longer
+        {
+            mergedList.addInPlace(curr1.data);
+            curr1 = curr1.next;
+        }
+        while(curr2 != null)//in case list 2 is longer
+        {
+            mergedList.addInPlace(curr2.data);
+            curr2 = curr2.next;
+        }
+        return mergedList;
+        
+    }
+
 
 } // end LinkedList
