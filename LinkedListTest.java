@@ -33,5 +33,8 @@ public class LinkedListTest {
         System.out.println("is subset");
         else
         System.out.println("is not subset");
+
+        list1.swap(2, 3);
+        list1.print();
     }
 }
