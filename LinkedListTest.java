@@ -16,20 +16,20 @@ public class LinkedListTest {
         
         
 
-        LinkedList list3 = LinkedList.mergeUnsortedLists(list1, list2);
+        // LinkedList list3 = LinkedList.mergeUnsortedLists(list1, list2);
         
-        list1.print();
-        list2.print();
+        // list1.print();
+        // list2.print();
 
-        list3.print();
+        // list3.print();
 
-        LinkedList list4 = LinkedList.multiply(list1);
-        list4.print();
+        // LinkedList list4 = LinkedList.multiply(list1);
+        // list4.print();
 
-        boolean sub = LinkedList.isSubset(list1, list2);
-        if(sub)
-        System.out.println("is subset");
-        else
-        System.out.println("is not subset");
+        // boolean sub = LinkedList.isSubset(list1, list2);
+        // if(sub)
+        // System.out.println("is subset");
+        // else
+        // System.out.println("is not subset");
     }
 }
