@@ -379,4 +379,25 @@ public class LinkedList
 
     }
 
+    public void swap(int i, int j)
+    {
+        Node curr1 = head;
+        Node curr2 = head;
+        Node temp = head;
+
+        for(int l = 0; l < i; i++)
+        {
+            curr1 = curr1.next;
+        }
+
+        for(int l2 = 0; l2 < j; l2++)
+        {
+            curr2 = curr2.next;
+        }
+
+        temp = curr1;
+        curr1 = curr2;
+        curr2 = temp;
+    }
+
 } // end LinkedList
