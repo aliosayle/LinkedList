@@ -1,3 +1,5 @@
+package linkedlist;
+
 public class LinkedListTest {
     public static void main(String[] args) {
         // Create the first LinkedList
@@ -12,24 +14,24 @@ public class LinkedListTest {
         LinkedList list2 = new LinkedList();
         list2.addTail(new NodeData(6));
         list2.addTail(new NodeData(87));
-        list2.addTail(new NodeData(5));
+        list2.addTail(new NodeData(54));
         
         
 
-        // LinkedList list3 = LinkedList.mergeUnsortedLists(list1, list2);
+        LinkedList list3 = LinkedList.mergeUnsortedLists(list1, list2);
         
-        // list1.print();
-        // list2.print();
+        list1.print();
+        list2.print();
 
-        // list3.print();
+        list3.print();
 
-        // LinkedList list4 = LinkedList.multiply(list1);
-        // list4.print();
+        LinkedList list4 = LinkedList.multiply(list1);
+        list4.print();
 
-        // boolean sub = LinkedList.isSubset(list1, list2);
-        // if(sub)
-        // System.out.println("is subset");
-        // else
-        // System.out.println("is not subset");
+        boolean sub = LinkedList.isSubset(list1, list2);
+        if(sub)
+        System.out.println("is subset");
+        else
+        System.out.println("is not subset");
     }
 }

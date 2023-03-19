@@ -366,9 +366,9 @@ public class LinkedList
             Node curr2 = b.head;//curr 2 is initialized inside the outer loop so it resets with each eteration of the inner loop
             while(curr2 != null)
             {
-               if(curr.data == curr2.data)
+               if(curr.data.value == curr2.data.value)
                counter++; //the counter will be incremented if the element from list b is found in list a
-               break;
+               curr2 = curr2.next;
             }
 
             curr = curr.next;
