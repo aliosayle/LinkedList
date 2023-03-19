@@ -335,5 +335,20 @@ public class LinkedList
         
     }
 
+    public static LinkedList multiply(LinkedList list1)
+    {
+        LinkedList list2 = new LinkedList();
+        Node curr1 = list1.head;
+        int mult = 1;
+        //Declare the datafields
+
+        for(int i = 0; i < list1.countNodes(); i++)
+        {
+            mult = mult * curr1.data.value;
+            list2.addTail(new NodeData(mult));
+            curr1 = curr1.next;
+        }
+        return list2;
+    }
 
 } // end LinkedList
