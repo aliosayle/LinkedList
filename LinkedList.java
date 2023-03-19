@@ -381,11 +381,14 @@ public class LinkedList
 
     public void swap(int i, int j)
     {
+        if (i == j || i < 0 || j < 0 || i >= countNodes() || j >= countNodes()) //check the indices
+            return;
+
         Node curr1 = head;
         Node curr2 = head;
         Node temp = head;
 
-        for(int l = 0; l < i; i++)
+        for(int l = 0; l < i; l++)
         {
             curr1 = curr1.next;
         }
@@ -395,9 +398,12 @@ public class LinkedList
             curr2 = curr2.next;
         }
 
-        temp = curr1;
-        curr1 = curr2;
-        curr2 = temp;
+        if (curr1 == curr2) // check if the nodes are the same
+        return;
+
+        temp = new Node(curr1.data);
+        curr1.data = curr2.data;
+        curr2.data = temp.data;
     }
 
 } // end LinkedList
