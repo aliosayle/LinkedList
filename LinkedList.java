@@ -3,6 +3,7 @@ package linkedlist;
 /* The class LinkedList with its operations: create, isEmpty, getHead, setHead,
  * addHead, addTail, addInPlace, insert, deleteHead, delete, print, search, 
  * countNodes, clear, equals, reverse, copy, and mergeSorted.
+ * @author AliOsseili
  */
 
 public class LinkedList 
@@ -388,12 +389,12 @@ public class LinkedList
         Node curr2 = head;
         Node temp = head;
 
-        for(int l = 0; l < i; l++)
+        for(int l = 0; l < i; l++) //points curr1 to the index of i 
         {
             curr1 = curr1.next;
         }
 
-        for(int l2 = 0; l2 < j; l2++)
+        for(int l2 = 0; l2 < j; l2++) //points curr2 to the index of j
         {
             curr2 = curr2.next;
         }
@@ -401,7 +402,7 @@ public class LinkedList
         if (curr1 == curr2) // check if the nodes are the same
         return;
 
-        temp = new Node(curr1.data);
+        temp = new Node(curr1.data); //stores NodeData of curr1 in temp
         curr1.data = curr2.data;
         curr2.data = temp.data;
     }
